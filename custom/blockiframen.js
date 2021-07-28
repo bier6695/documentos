@@ -2,14 +2,14 @@ function go_to_player(url) {
     document.querySelector(".BotHumano")
         .classList.add('BotHumanoA');
     document.querySelector(".BotHumano")
-        .insertAdjacentHTML('afterbegin', '<div class="BoxHumano"><span><b>Procesando vídeo</b> <p>Por favor espere unos segundos</p></span></div>');
+        .insertAdjacentHTML('afterbegin', '<div class="BoxHumano"><span><b>Procesando video</b> <p>Por favor espere unos segundos</p></span></div>');
     var displayVideo = document.querySelector(".DisplayVideo");
     displayVideo.classList.add('DisplayVideoA');
     displayVideo.innerHTML = `
     <span onclick="listPlayer();">
         <img src="https://i.imgur.com/CyF9UPO.png">
     </span>
-    <iframe onload='document.querySelector(".BotHumano").classList.remove("BotHumanoA")' id="IFR"$('.iframe-loading').css('background-image', 'none');" sandbox="allow-same-origin allow-scripts" scrolling="no` + url + `" frameborder="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>`;
+    <iframe onload='document.querySelector(".BotHumano").classList.remove("BotHumanoA")' id="IFR"$('.iframe-loading').css('background-image', 'none');" sandbox="allow-same-origin allow-scripts" scrolling="no" src="` + url + `" frameborder="0" allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true"></iframe>`;
 }
 
 function listPlayer(){
@@ -83,4 +83,3 @@ function SelLang(who, id) {
         document.removeEventListener ? e.removeEventListener("scroll", a) : e.detachEvent("onscroll", a), clearTimeout(i)
     }, c
 });
-
